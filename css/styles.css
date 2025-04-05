@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary_color: #004A9B;
+    --secondary_color: #EB1C24;
+    --bg_color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+.container {
+    width: 1440px;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    display: inherit;
+    justify-content: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Open Sans";
+    font-weight: 200;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg_color);
+    padding-top: 120px;
+}
+
+header {
+    position: fixed;
+    height: 57px;
+    width: 100%;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+
+    padding: 30px 0;
+    z-index: 999;
+    background-color: var(--bg_color);
+}
+
+header .logo {
+    width: 178px;
+    height: 57px;
+    background-image: url('../img/full_logo.svg');
+    background-size: cover;
+}
+
+
+header nav ul img {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: 100px 180px 150px;
+    align-items: center;
+
+    list-style: none;
+
+    z-index: 99;
+
+    background-color: var(--bg_color);
+}
+
+header nav ul .mail, .site {
+    gap: 60px;
+}
+
+header .container nav ul .mail-link {
+    color: var(--primary_color);
+}
+
+header .container nav ul .site-link {
+    color: var(--primary_color);
+}
+/* header nav ul li {
+    gap: 44px;
+} */
+
+.socials-container {
+    display: flex;
+    gap: 12px;
+}
+
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.banner {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.banner-img {
+    width: 666px;
+    height: 541px;
+}
+
+main .container .banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+}
+
+main .container .banner .text-container .logo-h1 {
+    font-size: 49px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary_color);
+}
+
+main .container .banner .text-container .logo-h1 img {
+    z-index: 0;
+}
+
+main .container .banner .text-container .logo-h1 span {
+    background-image: linear-gradient(to right, var(--secondary_color) 0%, var(--secondary_color) 100%);
+    background-repeat: repeat-x; 
+    background-position: 0 100%; 
+    background-size: 100% 2px; 
+}
