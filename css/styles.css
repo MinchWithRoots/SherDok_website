@@ -285,7 +285,6 @@ main .container .banner .text-container .primary:hover {
   padding-top: 205px;
 }
 
-
 #elementarno .container .text-container img {
   width: 81px;
   height: 14px;
@@ -325,7 +324,6 @@ main .container .banner .text-container .primary:hover {
 
   padding-top: 140px;
 }
-
 
 #hospitalization .container .text-container h3 {
   font-weight: 600;
@@ -381,8 +379,6 @@ main .container .banner .text-container .primary:hover {
   color: var(--bg_color);
 }
 
-
-
 /* ------------------------------------------------------------------ */
 /* секция 4 */
 
@@ -410,8 +406,6 @@ main .container .banner .text-container .primary:hover {
 #next .container .text-container span {
   color: var(--secondary_color);
 }
-
-
 
 /* ------------------------------------------------------------------ */
 /* секция 5 */
@@ -446,7 +440,6 @@ main .container .banner .text-container .primary:hover {
   color: var(--secondary_color);
 }
 
-
 /* ------------------------------------------------------------------ */
 /* секция 6 */
 #pay {
@@ -473,3 +466,105 @@ main .container .banner .text-container .primary:hover {
 #pay .container .text-container span {
   color: var(--secondary_color);
 }
+
+/* ------------------------------------------------------------------ */
+/* секция 7 */
+
+#benefits {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#benefits .container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  gap: 56px; */
+}
+
+#benefits .container .text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* width: 488px; */
+  /* height: 502px; */
+  padding-top: 101px;
+  position: relative;
+
+  z-index: 999;
+}
+
+#benefits .container .text-container .item:first-child {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  width: 315px;
+  justify-self: center;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+#benefits .container .text-container .item:nth-child(2) {
+  /* grid-row: 2;
+  grid-column: 2 / 4; */
+}
+
+#benefits .container .text-container .item ul li {
+  list-style-image: url(../img/galochka.svg);
+  /* align-items: ; */
+}
+
+#benefits .container .text-container .item ul li::marker {
+  padding-top: 10px;
+}
+
+#benefits .container .text-container img {
+  grid-row: 2 / 4;
+  grid-column: 2 / 3;
+}
+
+#benefits .container .text-container .item h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+#benefits .container .text-container .item p {
+  padding-top: 12px;
+}
+
+#benefits .container h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* #pay .container .text-container h2 {
+  grid-area: ;
+} */
+
+/* #benefits .container .text-container h3 {
+  display: grid;
+  grid-row: 2 / 3 / 3;
+  z-index: 999;
+} */
+
+#benefits .container img {
+  /* grid-area: 1 / 1;
+  width: 565px;
+  grid-column: 2 / 3; 
+  grid-row: 2 / span 3; 
+  justify-self: center;
+
+  position: relative;
+  z-index: 1; */
+}
+
+#benefits .container .text-container .item:nth-child(2) {
+  /* grid-area: 1 / 2; */
+}
+
+/* #benefits .container .text-container .item:nth-child(2) {
+  grid-column: 3;
+  grid-row: 5;
+} */
