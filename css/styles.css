@@ -449,3 +449,27 @@ main .container .banner .text-container .primary:hover {
 
 /* ------------------------------------------------------------------ */
 /* секция 6 */
+#pay {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#pay .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: space-between;
+  justify-content: center;
+
+  padding-bottom: 100px;
+}
+
+#pay .container .text-container {
+  grid-area: 1 / 1;
+  width: 488px;
+  height: 502px;
+  padding-top: 101px;
+}
+
+#pay .container .text-container span {
+  color: var(--secondary_color);
+}
