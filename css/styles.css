@@ -232,7 +232,7 @@ main .container .banner .text-container .primary:hover {
 #familiar_with .container .text-container h2 {
   font-size: 49px;
   font-family: "Open Sans";
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   color: var(--primary_color);
@@ -245,7 +245,7 @@ main .container .banner .text-container .primary:hover {
 }
 
 #familiar_with .container .text-container span {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 140%;
   text-align: left;
@@ -258,9 +258,8 @@ main .container .banner .text-container .primary:hover {
 
 #familiar_with .container .text-container ul li {
   list-style-image: url(../img/bullet.svg);
-  list-style-position:inside;
+  list-style-position: inside;
 }
-
 
 /* ------------------------------------------------------------------ */
 /* секция 2 */
@@ -276,17 +275,20 @@ main .container .banner .text-container .primary:hover {
   align-content: space-between;
   justify-content: center;
   gap: 107px;
+
+  padding-bottom: 100px;
 }
 
 #elementarno .container .text-container {
   grid-area: 1 / 1;
+  width: 590px;
   padding-top: 205px;
 }
 
 #elementarno .container .text-container h2 {
   font-size: 49px;
   font-family: "Open Sans";
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   color: var(--primary_color);
@@ -307,5 +309,94 @@ main .container .banner .text-container .primary:hover {
   grid-column: 2;
   grid-row: 1 / -1;
   width: 503px;
-  align-self: center; 
+  align-self: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* секция 3 */
+
+#hospitalization {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#hospitalization .container {
+  display: grid;
+  grid-template-columns: 1fr 557px;
+
+  padding-bottom: 100px;
+}
+
+#hospitalization .container .text-container {
+  text-align: left;
+  align-items: center;
+  width: 557px;
+  height: 100%;
+
+  padding-top: 140px;
+}
+
+#hospitalization .container .text-container h2 {
+  font-size: 49px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--primary_color);
+
+  padding-bottom: 28px;
+}
+
+#hospitalization .container .text-container h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--primary_color);
+
+  padding-bottom: 18px;
+}
+
+#hospitalization .container .text-container span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+}
+
+#hospitalization .container .text-container ul {
+  width: 557px;
+  padding-top: 18px;
+  padding-bottom: 27px;
+}
+
+#hospitalization .container .text-container ul li {
+  list-style-image: url(../img/bullet.svg);
+  list-style-position: inside;
+}
+
+#hospitalization .container .text-container .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#hospitalization .container .text-container .button-container button {
+  width: 183px;
+  height: 52px;
+  color: var(--secondary_color);
+  background-color: var(--bg_color);
+
+  border-radius: 120px;
+  border: 1px solid var(--secondary_color);
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+}
+
+#hospitalization .container .text-container .button-container button:hover {
+  background-color: var(--secondary_color);
+  color: var(--bg_color);
 }
