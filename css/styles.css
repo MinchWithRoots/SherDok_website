@@ -216,11 +216,11 @@ main .container .banner .text-container .primary:hover {
 #familiar_with .container {
   display: grid;
   grid-template-columns: 1fr 557px;
+
+  padding-bottom: 100px;
 }
 
 #familiar_with .container .text-container {
-  /* display: flex; */
-  /* flex-direction: column; */
   text-align: left;
   align-items: center;
   width: 557px;
@@ -262,3 +262,50 @@ main .container .banner .text-container .primary:hover {
 }
 
 
+/* ------------------------------------------------------------------ */
+/* секция 2 */
+
+#elementarno {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#elementarno .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: space-between;
+  justify-content: center;
+  gap: 107px;
+}
+
+#elementarno .container .text-container {
+  grid-area: 1 / 1;
+  padding-top: 205px;
+}
+
+#elementarno .container .text-container h2 {
+  font-size: 49px;
+  font-family: "Open Sans";
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--primary_color);
+
+  padding-bottom: 28px;
+}
+
+#elementarno .container .text-container img {
+  width: 81px;
+  height: 14px;
+}
+
+#elementarno .container .text-container span {
+  color: var(--primary_color);
+}
+
+#elementarno .container img {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  width: 503px;
+  align-self: center; 
+}
