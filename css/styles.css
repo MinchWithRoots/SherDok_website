@@ -36,6 +36,17 @@ h4 {
   font-weight: 200;
 }
 
+h2 {
+  font-size: 49px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--primary_color);
+
+  padding-bottom: 28px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -179,7 +190,7 @@ main .container .banner .text-container .logo-h1 span {
   background-size: 100% 2px;
 }
 
-main .container .banner .text-container h2 {
+main .container .banner .text-container p {
   font-size: 16px;
   font-weight: 400;
 
@@ -229,17 +240,6 @@ main .container .banner .text-container .primary:hover {
   padding-top: 140px;
 }
 
-#familiar_with .container .text-container h2 {
-  font-size: 49px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  line-height: 120%;
-  text-transform: uppercase;
-  color: var(--primary_color);
-
-  padding-bottom: 28px;
-}
-
 #familiar_with .container .text-container p {
   padding-bottom: 28px;
 }
@@ -285,16 +285,6 @@ main .container .banner .text-container .primary:hover {
   padding-top: 205px;
 }
 
-#elementarno .container .text-container h2 {
-  font-size: 49px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  line-height: 120%;
-  text-transform: uppercase;
-  color: var(--primary_color);
-
-  padding-bottom: 28px;
-}
 
 #elementarno .container .text-container img {
   width: 81px;
@@ -336,16 +326,6 @@ main .container .banner .text-container .primary:hover {
   padding-top: 140px;
 }
 
-#hospitalization .container .text-container h2 {
-  font-size: 49px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  line-height: 120%;
-  text-transform: uppercase;
-  color: var(--primary_color);
-
-  padding-bottom: 28px;
-}
 
 #hospitalization .container .text-container h3 {
   font-weight: 600;
@@ -400,3 +380,72 @@ main .container .banner .text-container .primary:hover {
   background-color: var(--secondary_color);
   color: var(--bg_color);
 }
+
+
+
+/* ------------------------------------------------------------------ */
+/* секция 4 */
+
+#next {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#next .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: space-between;
+  justify-content: center;
+
+  padding-bottom: 100px;
+}
+
+#next .container .text-container {
+  grid-area: 1 / 1;
+  width: 590px;
+  height: 502px;
+  padding-top: 83px;
+}
+
+#next .container .text-container span {
+  color: var(--secondary_color);
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* секция 5 */
+
+#what_for {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#what_for .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding-bottom: 100px;
+}
+
+#what_for .container .text-container {
+  text-align: left;
+  align-items: center;
+  width: 509px;
+  height: 100%;
+
+  padding-top: 240px;
+}
+
+#what_for .container .text-container img {
+  width: 81px;
+  height: 14px;
+}
+
+#what_for .container .text-container span {
+  color: var(--secondary_color);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* секция 6 */
