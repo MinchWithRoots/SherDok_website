@@ -213,7 +213,10 @@ main .container .banner .text-container .primary {
 }
 
 main .container .banner .text-container .primary:hover {
-  opacity: 0.8;
+  color: var(--secondary_color);
+  background-color: var(--bg_color);
+  border: 1px solid var(--secondary_color);
+  transition: .3s;
 }
 
 /* ------------------------------------------------------------------ */
@@ -377,6 +380,7 @@ main .container .banner .text-container .primary:hover {
 #hospitalization .container .text-container .button-container button:hover {
   background-color: var(--secondary_color);
   color: var(--bg_color);
+  transition: .3s;
 }
 
 /* ------------------------------------------------------------------ */
@@ -563,17 +567,18 @@ main .container .banner .text-container .primary:hover {
   align-content: center;
   justify-content: center;
   align-items: center;
-
-  padding-bottom: 100px;
 }
 
-#questions .container h2 {
+#questions .container .text-container {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 794px;
-  padding-bottom: 67px;
+  /* width: 899px; */
+}
+
+#questions .container h2 {
+  /* padding-bottom: 67px; */
 }
 
 #questions .container img {
@@ -592,16 +597,24 @@ footer {
 footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-content: center;
+
+  gap: 60px;
+
   justify-content: center;
-  align-items: center;
+  align-items:start;
+  text-align: left;
+
+  padding-top: 38px;
+  padding-bottom: 45px;
 }
 
 footer .container ul li {
   list-style: none;
   font-weight: 400;
   font-size: 16px;
-line-height: 140%;
+  line-height: 140%;
+
+  text-align: left;
 }
 
 
@@ -610,17 +623,76 @@ footer .container ul li span {
 font-size: 16px;
 line-height: 140%;
 color: var(--primary_color);
+
 }
 
-footer .container .recvizit, .numbers {
+footer .container .recvizit, .numbers, .info {
   font-weight: 600;
   font-size: 20px;
   line-height: 130%;
+
+  margin: 0 auto;
+   display: flex; 
+  flex-direction: column;
 }
+
+footer .container .numbers span{
+  padding-bottom: 19px;
+}
+
+
+footer .container .numbers .icons {
+  font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+
+
+
+}
+
+footer .container .numbers .icons .icon {
+  width: 32px;
+  height: 32px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer .container .numbers .icons span {
+  display: flex;
+    gap: 8px;
+    justify-content: center;
+align-items: center;
+}
+
+footer .container .numbers .icons .icon.phone {
+  background-image: url(../img/phone.svg);
+}
+
+footer .container .numbers .icons .icon.telegram {
+  background-image: url(../img/telegram.svg);
+}
+
+footer .container .numbers .icons .icon.whatsup {
+  background-image: url(../img/whatsup.svg);
+}
+
+footer .container .recvizit span{
+  padding-bottom: 22px;
+}
+
 
 footer .container .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+footer .container .info .button-container {
+  display: flex;
   gap: 20px;
 }
 
@@ -637,6 +709,24 @@ footer .container .info button {
   font-weight: 600;
   font-size: 16px;
   line-height: 140%;
+  text-align: center;
+}
+
+footer .container .info button:hover {
+  background-color: var(--secondary_color);
+  color: var(--bg_color);
+  transition: .3s;
+}
+
+ hr {
+  color: var(--add_color);
+  width: 1026px;
+
+  margin-top: 47px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
