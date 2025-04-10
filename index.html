@@ -28,10 +28,12 @@
             </div>
           </ul>
         </nav>
-        <!-- <div class="burger">
-                <span></span>
-                <span></span>
-            </div> -->
+
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+        </div>
+        
       </div>
     </header>
 
@@ -300,5 +302,12 @@
       </div>
     </footer>
 
+
+    <script>
+      function toggleMenu() {
+        document.querySelector("header nav ul").classList.toggle("show");
+        document.querySelector(".burger").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
