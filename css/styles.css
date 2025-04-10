@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url('./mobile.css');
+@import url("./mobile.css");
 
 :root {
   --primary_color: #004a9b;
@@ -75,7 +75,6 @@ header {
   z-index: 999;
   background-color: var(--bg_color);
 }
-
 
 .burger {
   width: 26px;
@@ -234,7 +233,7 @@ main .container .banner .text-container .primary:hover {
   color: var(--secondary_color);
   background-color: var(--bg_color);
   border: 1px solid var(--secondary_color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 /* ------------------------------------------------------------------ */
@@ -398,7 +397,7 @@ main .container .banner .text-container .primary:hover {
 #hospitalization .container .text-container .button-container button:hover {
   background-color: var(--secondary_color);
   color: var(--bg_color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 /* ------------------------------------------------------------------ */
@@ -521,20 +520,6 @@ main .container .banner .text-container .primary:hover {
   font-size: 16px;
   line-height: 140%;
 }
-#benefits .container .text-container .item:nth-child(2) {
-  /* grid-row: 2;
-  grid-column: 2 / 4; */
-}
-
-#benefits .container .text-container .item  {
-
-  
-}
-
-#benefits .container .text-container .item ul {
-  /* align-self: center; */
-  /* height: 26px; */
-}
 
 #benefits .container .text-container .item span {
   font-weight: 600;
@@ -545,6 +530,10 @@ main .container .banner .text-container .primary:hover {
 #benefits .container .text-container img {
   grid-row: 2 / 4;
   grid-column: 2 / 3;
+}
+
+#benefits .container .mob-img {
+  display: none;
 }
 
 #benefits .container .text-container .item h3 {
@@ -565,13 +554,11 @@ main .container .banner .text-container .primary:hover {
   background-repeat: no-repeat;
 }
 
-
 #benefits .container h2 {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
 
 /* ------------------------------------------------------------------ */
 /* секция 8 */
@@ -594,12 +581,9 @@ main .container .banner .text-container .primary:hover {
   align-items: center;
 }
 
-
 #questions .container img {
   justify-self: center;
 }
-
-
 
 /* ------------------------------------------------------------------ */
 /* footer */
@@ -616,7 +600,7 @@ footer .container {
   gap: 60px;
 
   justify-content: center;
-  align-items:start;
+  align-items: start;
   text-align: left;
 
   padding-top: 38px;
@@ -632,37 +616,33 @@ footer .container ul li {
   text-align: left;
 }
 
-
 footer .container ul li span {
   font-weight: 600;
-font-size: 16px;
-line-height: 140%;
-color: var(--primary_color);
-
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--primary_color);
 }
 
-footer .container .recvizit, .numbers, .info {
+footer .container .recvizit,
+.numbers,
+.info {
   font-weight: 600;
   font-size: 20px;
   line-height: 130%;
 
   margin: 0 auto;
-   display: flex; 
+  display: flex;
   flex-direction: column;
 }
 
-footer .container .numbers span{
+footer .container .numbers span {
   padding-bottom: 19px;
 }
 
-
 footer .container .numbers .icons {
   font-weight: 400;
-font-size: 16px;
-line-height: 140%;
-
-
-
+  font-size: 16px;
+  line-height: 140%;
 }
 
 footer .container .numbers .icons .icon {
@@ -676,9 +656,9 @@ footer .container .numbers .icons .icon {
 
 footer .container .numbers .icons span {
   display: flex;
-    gap: 8px;
-    justify-content: center;
-align-items: center;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .container .numbers .icons .icon.phone {
@@ -693,10 +673,9 @@ footer .container .numbers .icons .icon.whatsup {
   background-image: url(../img/whatsup.svg);
 }
 
-footer .container .recvizit span{
+footer .container .recvizit span {
   padding-bottom: 22px;
 }
-
 
 footer .container .info {
   display: flex;
@@ -730,10 +709,10 @@ footer .container .info button {
 footer .container .info button:hover {
   background-color: var(--secondary_color);
   color: var(--bg_color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
- hr {
+hr {
   color: var(--add_color);
   width: 1026px;
 
@@ -745,23 +724,51 @@ footer .container .info button:hover {
   text-align: center;
 }
 
-
-
-
 /* ------------------------------------------------------------------ */
 /* мобильная версия */
 
-
-@media screen and (max-width:410px) {
-
+@media screen and (max-width: 410px) {
   body {
     padding-top: 0px;
   }
 
+  h2 {
+    font-size: 28px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--primary_color);
+
+    padding-bottom: 28px;
+    max-width: 320px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+    max-width: 224px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    width: 320px;
+  }
+
+  ul li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    width: 320px;
+  }
+
   .container {
-      width: 320px;
-      display: flex;
-      flex-direction: row;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
   }
 
   header {
@@ -771,19 +778,19 @@ footer .container .info button:hover {
     height: 49px;
     width: 100%;
     top: 0;
-  
+
     display: flex;
     flex-direction: row;
     align-items: start;
     align-items: center;
-  
+
     font-size: 16px;
     font-weight: 600;
 
     z-index: 999;
     background-color: var(--bg_color);
   }
-  
+
   header .logo {
     width: 150px;
     height: 49px;
@@ -795,26 +802,39 @@ footer .container .info button:hover {
     display: none;
   }
 
-  .burger {
-      display: flex;
-      z-index: 99;
+  /* --------------------------------------------------- */
+  /* ------------burger menu---------------- */
+
+  #menu {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
   }
 
-  .burger span {
-    transition: .3s;
-}
+  #menu span {
+    width: 26px;
+    height: 4px;
+    background-color: var(--primary_color);
+    border-radius: 3px;
+    transition: 0.3s ease;
+    transform-origin: center;
+  }
 
-.burger.show span:nth-child(1) {
-  position: absolute;
-  top: 10px;
-    transform: rotateZ(45deg);
-}
+  .open .line1 {
+    transform: rotate(45deg) translateY(3px) translateX(4px);
+  }
 
-.burger.show span:nth-child(2) {
-  position: absolute;
-  top: 10px;
-    transform: rotateZ(-45deg);
-}
+  .open .line2 {
+    transform: rotate(-45deg) translateY(-3px) translateX(4px);
+  }
+
+  /* --------------------------------------------------- */
+  /* ------------burger menu---------------- */
 
   main {
     display: flex;
@@ -823,67 +843,140 @@ footer .container .info button:hover {
 
   main .container .banner {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
 
     padding-top: 40px;
-    }
-
-    main .container .banner .text-container {
-      width: 320px;
-    }
-    
-    main .container .banner .text-container .logo-h1 {
-      font-size: 39px;
-      font-family: "Open Sans";
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--primary_color);
-    }
-
-    .banner-img {
-      max-width: 315px;
-      height: 256px;
-      z-index: 999;
-      margin-left: 0;
-      padding-bottom: 20px;
-    }
-
-
-    main .container .banner .text-container p {
-      font-size: 16px;
-      font-weight: 400;
-    
-      padding-bottom: 49px;
-      width: 320px !important;
-    }
-    
-    main .container .banner .text-container .logo-h1 span {
-      background-image: linear-gradient(
-        to right,
-        var(--secondary_color) 0%,
-        var(--secondary_color) 100%
-      );
-      background-repeat: repeat-x;
-      background-position: 0 100%;
-      background-size: 100% 2px;
-    }
-
-    main .container .banner .text-container .logo-h1 img {
-      width: 196px;
-      height: 35px;
-    }
-
-    main .container .banner .text-container .primary {
-      background-color: var(--secondary_color);
-      width: 320px;
-      height: 49px;
-      color: #fff;
-    
-      border-radius: 120px;
-      border: none;
-      cursor: pointer;
-    
-      font-size: 16px;
-      font-weight: 500;
-    }
   }
+
+  main .container .banner .text-container {
+    width: 320px;
+  }
+
+  main .container .banner .text-container .logo-h1 {
+    font-size: 38px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary_color);
+  }
+
+  .banner-img {
+    max-width: 315px;
+    height: 256px;
+    z-index: 999;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  main .container .banner .text-container p {
+    font-size: 15px;
+    font-weight: 400;
+
+    padding-bottom: 49px;
+    width: 320px !important;
+  }
+
+  main .container .banner .text-container .logo-h1 span {
+    background-image: linear-gradient(
+      to right,
+      var(--secondary_color) 0%,
+      var(--secondary_color) 100%
+    );
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 100% 2px;
+  }
+
+  main .container .banner .text-container .logo-h1 img {
+    width: 196px;
+    height: 35px;
+  }
+
+  main .container .banner .text-container .primary {
+    background-color: var(--secondary_color);
+    width: 320px !important;
+    height: 49px;
+    color: #fff;
+
+    border-radius: 120px;
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #familiar_with .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #elementarno .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #elementarno .container img {
+    max-width: 321px;
+  }
+
+  #hospitalization .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #next .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #what_for .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #what_for .container .text-container {
+    padding-top: 0;
+  }
+
+  #pay .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #benefits .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #benefits .container .text-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #benefits .container .text-container img {
+    display: none;
+  }
+
+  #benefits .container .text-container .mob-img {
+    display: block;
+  }
+
+  #questions .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #questions .container img {
+    max-width: 321px;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    max-width: 150px;
+  }
+}

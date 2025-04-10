@@ -11,7 +11,7 @@
       <div class="container">
         <div class="logo"></div>
         <nav>
-          <ul>
+          <ul onclick="toggleMenu()">
             <div class="socials-container">
               <img src="./img/whatsup.svg" alt="" />
               <img src="./img/telegram.svg" alt="" />
@@ -29,9 +29,9 @@
           </ul>
         </nav>
 
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
+        <div id="menu" title="menu icon">
+          <span class="line1"></span>
+          <span class="line2"></span>
         </div>
         
       </div>
@@ -229,8 +229,10 @@
               чтобы создать пассивный доход.</p>
           </div>
             
+
+          <img class="mob-img" src="./img/img8.svg" alt="">
         </div>
-        
+       
       </div>
     </section>
 
@@ -249,8 +251,7 @@
     </section>
 
     <footer>
-      
-      
+
       <div class="container">
         <div class="numbers">
           <span>Пишите/Звоните</span>
@@ -303,11 +304,11 @@
     </footer>
 
 
-    <script>
+    <!-- <script>
       function toggleMenu() {
         document.querySelector("header nav ul").classList.toggle("show");
-        document.querySelector(".burger").classList.toggle("show");
       }
-    </script>
+    </script> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
