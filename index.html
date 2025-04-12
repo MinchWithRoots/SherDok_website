@@ -11,7 +11,7 @@
       <div class="container">
         <div class="logo"></div>
         <nav>
-          <ul onclick="toggleMenu()">
+          <ul onclick="wrapperMenu()">
             <div class="socials-container">
               <img src="./img/whatsup.svg" alt="" />
               <img src="./img/telegram.svg" alt="" />
@@ -29,7 +29,7 @@
           </ul>
         </nav>
 
-        <div id="menu" title="menu icon">
+        <div id="menu" onclick="toggleMenu()" title="menu icon">
           <span class="line1"></span>
           <span class="line2"></span>
         </div>
@@ -307,11 +307,6 @@
     </footer>
 
 
-    <!-- <script>
-      function toggleMenu() {
-        document.querySelector("header nav ul").classList.toggle("show");
-      }
-    </script> -->
     <script src="./js/script.js"></script>
   </body>
 </html>

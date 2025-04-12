@@ -48,6 +48,11 @@ h2 {
   padding-bottom: 28px;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -407,7 +412,7 @@ main .container .banner .text-container .primary:hover {
 
 #next .container .text-container {
   grid-area: 1 / 1;
-  width: 590px;
+  width: 516px;
   height: 502px;
   padding-top: 83px;
 }
@@ -467,7 +472,7 @@ main .container .banner .text-container .primary:hover {
 
 #pay .container .text-container {
   grid-area: 1 / 1;
-  width: 320px;
+  width: 489px;
   height: fit-content;
   padding-top: 101px;
   padding-bottom: 81px;
@@ -596,6 +601,10 @@ footer .container {
 
   padding-top: 38px;
   padding-bottom: 45px;
+}
+
+footer .container hr {
+  display: none;
 }
 
 footer .container ul li {
@@ -797,6 +806,25 @@ hr {
     display: none;
   }
 
+  /* header nav ul {
+    position: fixed;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    left: 100%;
+    transition: .3s;
+}
+
+header nav ul.show {
+    left: 0%;
+    display: block;
+} */
+
+
   /* --------------------------------------------------- */
   /* ------------burger menu---------------- */
 
@@ -828,6 +856,9 @@ hr {
     transform: rotate(-45deg) translateY(-3px) translateX(4px);
   }
 
+  .show nav {
+    display: block;
+  }
   /* --------------------------------------------------- */
   /* ------------burger menu---------------- */
 
