@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("./mobile.css");
+/* @import url("./mobile.css"); */
 
 :root {
   --primary_color: #004a9b;
@@ -58,7 +58,7 @@ body {
 }
 
 header {
-  position: absolute;
+  position:absolute;
   height: 57px;
   width: 100%;
   top: 0;
@@ -76,20 +76,8 @@ header {
   background-color: var(--bg_color);
 }
 
-.burger {
-  width: 26px;
-  height: 10px;
-
+#menu {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.burger span {
-  width: 100%;
-  height: 3px;
-  background-color: var(--primary_color);
-  border-radius: 50px;
 }
 
 header .logo {
@@ -479,9 +467,10 @@ main .container .banner .text-container .primary:hover {
 
 #pay .container .text-container {
   grid-area: 1 / 1;
-  width: 488px;
-  height: 502px;
+  width: 320px;
+  height: fit-content;
   padding-top: 101px;
+  padding-bottom: 81px;
 }
 
 #pay .container .text-container span {
@@ -530,6 +519,8 @@ main .container .banner .text-container .primary:hover {
 #benefits .container .text-container img {
   grid-row: 2 / 4;
   grid-column: 2 / 3;
+
+  padding-bottom: 39px;
 }
 
 #benefits .container .mob-img {
@@ -673,6 +664,10 @@ footer .container .numbers .icons .icon.whatsup {
   background-image: url(../img/whatsup.svg);
 }
 
+footer .container .numbers .icons-mob {
+  display: none;
+}
+
 footer .container .recvizit span {
   padding-bottom: 22px;
 }
@@ -727,7 +722,7 @@ hr {
 /* ------------------------------------------------------------------ */
 /* мобильная версия */
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 460px) {
   body {
     padding-top: 0px;
   }
@@ -844,8 +839,7 @@ hr {
   main .container .banner {
     display: flex;
     flex-direction: column-reverse;
-
-    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   main .container .banner .text-container {
@@ -865,7 +859,6 @@ hr {
     height: 256px;
     z-index: 999;
     margin-left: 0;
-    padding-bottom: 20px;
   }
 
   main .container .banner .text-container p {
@@ -909,15 +902,32 @@ hr {
   #familiar_with .container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 80px;
+  }
+
+  #familiar_with .container .text-container {
+    padding-top: 38px;
+  }
+
+  #familiar_with .container .text-container p {
+    padding-bottom: 38px;
+  }
+
+  #familiar_with .container .text-container ul li {
+    padding-bottom: 8px;
   }
 
   #elementarno .container {
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 80px;
+
+    gap: 38px;
   }
 
   #elementarno .container img {
     max-width: 321px;
+    padding: 0;
   }
 
   #hospitalization .container {
@@ -925,58 +935,247 @@ hr {
     flex-direction: column;
   }
 
+  #hospitalization .container .text-container ul li{
+    padding-bottom: 8px;
+  }
+
+  #elementarno .container .text-container {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  #hospitalization .container {
+    padding-bottom: 80px;
+  }
+
+  #hospitalization .container .text-container {
+    padding-top: 38px;
+  }
+
   #next .container {
     display: flex;
     flex-direction: column-reverse;
   }
 
+  #next .container .text-container {
+    height: 300px;
+    padding-top: 38px;
+  }
+
   #what_for .container {
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   #what_for .container .text-container {
-    padding-top: 0;
+    padding-top: 38px;
+    /* height: 100%; */
   }
 
   #pay .container {
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 0;
   }
+
+  #pay .container .text-container {
+    padding-top: 39px;
+  }
+
 
   #benefits .container {
     display: flex;
     flex-direction: column;
+
+    padding-bottom: 80px;
   }
 
   #benefits .container .text-container {
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 0;
+  }
+
+  #benefits .container .text-container p {
+    max-width: 280px;
   }
 
   #benefits .container .text-container img {
     display: none;
   }
 
-  #benefits .container .text-container .mob-img {
+  #benefits .container .mob-img {
     display: block;
+
+    padding-bottom: 39px;
+  }
+
+  #benefits .container h2 {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+  }
+
+  #benefits .container .text-container .item {
+    padding-left: 35px;
+
+    padding-bottom: 18px;
   }
 
   #questions .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  #questions .container hr {
+    display: none;
   }
 
   #questions .container img {
     max-width: 321px;
+    padding-bottom: 38px;
   }
+
+  /* footer {
+
+  } */
 
   footer .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 150px 150px;
+
+    gap: 38px;
   }
 
-  button {
+  footer .container .icons a {
+    color: black;
+    text-decoration: none;
+  }
+
+
+  footer .container .icons span .whats_up,
+  span .telegram_num {
+    display: none;
+  }
+
+  footer .container .recvizit {
+    grid-area: 2 / 2;
+  }
+
+  footer .container .recvizit ul li {
+    max-width: 150px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .recvizit ul li span {
+    font-size: 15px;
+  }
+
+  footer .container .recvizit span {
+    max-width: 150px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    padding-bottom: 18px;
+  }
+
+  footer .container .info {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  footer .container .info span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  footer .container .numbers span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+
+    padding-bottom: 18px;
+  }
+
+  footer .container .numbers .icons-mob {
+    display: flex;
+    flex-direction: row;
+
+    width: 132px;
+    height: 30px;
+
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-top: 90px;
+  }
+
+  footer .container .numbers .icons-mob .phone-mob {
+    background-image: url(../img/phone.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .telegram-mob {
+    background-image: url(../img/telegram.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .whatsup-mob {
+    background-image: url(../img/whatsup.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .icons span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .icons span .icon.phone,
+  .icon.telegram,
+  .icon.whatsup {
+    display: none;
+  }
+
+  footer hr {
+    max-width: 100%;
+    grid-row: 3;
+    grid-column: span 2;
+    color: var(--add_color);
+    opacity: 0.5;
+  }
+
+  #hospitalization button,
+  footer button {
     max-width: 150px;
   }
+}
+
+
+@media screen and (max-width: 1370px) {
+
 }
