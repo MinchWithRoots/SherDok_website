@@ -10,30 +10,62 @@
     <header>
       <div class="container">
         <div class="logo"></div>
-        <nav>
-          <ul onclick="wrapperMenu()">
-            <div class="socials-container">
-              <img src="./img/whatsup.svg" alt="" />
-              <img src="./img/telegram.svg" alt="" />
-            </div>
-            <div class="mail">
-              <li>Наша почта:</li>
-              <li class="mail-link">
-                <a href=""></a>hello@sherdoc<span>.ru</span>
-              </li>
-            </div>
-            <div class="site">
-              <li>Перейти на сайт:</li>
-              <li class="site-link"><a href="#"></a>SherDoc<span>.ru</span></li>
-            </div>
-          </ul>
-        </nav>
-
-        <div id="menu" onclick="toggleMenu()" title="menu icon">
+    
+        <div id="menu" title="menu icon">
           <span class="line1"></span>
           <span class="line2"></span>
         </div>
-        
+
+        <nav class="mobile-menu">
+
+          <div class="numbers">
+            <span>Пишите/Звоните</span>
+            
+  
+              <div class="icons">
+                
+                <span>
+                  <div class="icon phone"></div>
+                  <a class="phone" href="">+7-903-905-56-65</a>
+                </span>
+  
+                <span>
+                  <div class="icon telegram"></div>
+                 
+                </span>
+  
+                <span>
+                  <div class="icon whatsup"></div>
+
+                </span>
+              </div>
+  
+              <div class="icons-mob">
+                <div class="phone-mob"></div>
+                <div class="telegram-mob"></div>
+                <div class="whatsup-mob"></div>
+              </div>
+         
+          </div>
+
+          <ul>
+            <li>
+              <div class="socials-container">
+                <img src="./img/whatsup.svg" alt="WhatsApp" />
+                <img src="./img/telegram.svg" alt="Telegram" />
+                <img src="./img/phone.svg" alt="Phone" />
+              </div>
+            </li>
+            <li class="mail">
+              <span>Наша почта:</span>
+              <a href="mailto:hello@sherdoc.ru">hello@sherdoc<span>.ru</span></a>
+            </li>
+            <li class="site">
+              <span>Перейти на сайт:</span>
+              <a href="https://sherdoc.ru">SherDoc<span>.ru</span></a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 

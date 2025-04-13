@@ -1,8 +1,7 @@
 var wrapperMenu = document.querySelector("#menu");
+var mobileMenu = document.querySelector(".mobile-menu");
 
-var navMenu = document.querySelector("header nav ul");
-
- wrapperMenu.addEventListener("click", function () {
+wrapperMenu.addEventListener("click", function () {
   wrapperMenu.classList.toggle("open");
-  navMenu.classList.toggle("show");
+  mobileMenu.classList.toggle("active");
 });
