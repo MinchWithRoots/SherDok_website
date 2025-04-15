@@ -63,7 +63,7 @@ body {
 }
 
 header {
-  position:absolute;
+  position: absolute;
   height: 57px;
   width: 100%;
   top: 0;
@@ -84,7 +84,6 @@ header {
 #menu {
   display: none;
 }
-
 
 header .logo {
   width: 178px;
@@ -132,7 +131,7 @@ header .container nav ul span {
   color: var(--secondary_color);
 }
 
-header .container nav ul li span{
+header .container nav ul li span {
   color: var(--add_color);
 }
 
@@ -141,11 +140,6 @@ header .container nav ul li a span {
 }
 
 .socials-container {
-  display: flex;
-  gap: 12px;
-}
-
-.socials-container img:last-child {
   display: none;
 }
 
@@ -789,84 +783,157 @@ hr {
   }
 
   header {
-    padding: 0;
+    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 40px;
     position: relative;
     height: 49px;
-    width: 100%;
     top: 0;
 
     display: flex;
     flex-direction: row;
-    align-items: start;
     align-items: center;
 
     font-size: 16px;
     font-weight: 600;
 
-    z-index: 999;
+    z-index: 1100;
     background-color: var(--bg_color);
   }
 
   .mobile-menu {
     height: 305px;
     background: #fff;
-    z-index: 999;
-    /* padding: 30px 20px; */
-    /* overflow-y: none; */
-    /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    /* z-index: 2100; */
 
-    justify-content: center;
-    align-content: center;
-    justify-items: center; */
+    padding-left: 20px;
 
     position: fixed;
-        left: 0;
-        top: 0;
-        flex-direction: column;
-        text-align: center;
-        width: 360px;
-        height: 305px;
-        justify-content: center;
-        top: -100%;
-        transition: .4s;
-
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    top: -100%;
+    transition: 0.3s;
   }
-  
+
   .mobile-menu.active {
     top: 0%;
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
-    align-content: center;
+    position: fixed;
+    align-self: center;
   }
 
-  .mobile-menu.active ul .links{
+  .mobile-menu.active ul .links {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    justify-content: space-between;
     align-items: center;
- 
-
-    /* width: 320px; */
   }
 
   .mobile-menu.active ul li .socials-container {
     display: none;
   }
 
-  header nav .numbers {
-    padding-top: 20px;
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary_color);
+    opacity: 50%;
+    z-index: 1000;
+  }
 
-    grid-column: span 2;
+  .overlay.active {
+    display: block;
+  }
+
+  header nav .numbers {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    font-size: 15px;
+
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  header nav .numbers span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+
+    padding-bottom: 18px;
+  }
+
+  header nav .numbers .icons span a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #000;
+
+    padding-bottom: 10px;
+  }
+
+  header nav .numbers .icons-mob {
+    display: flex;
+    flex-direction: row;
+
+    width: 132px;
+    height: 30px;
+
+    gap: 12px;
+    justify-content: center;
+  }
+
+  header nav .numbers .icons-mob .phone-mob {
+    background-image: url(../img/phone.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
+  }
+
+  header nav .numbers .icons-mob .telegram-mob {
+    background-image: url(../img/telegram.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
+  }
+
+  header nav .numbers .icons-mob .whatsup-mob {
+    background-image: url(../img/whatsup.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
   }
 
   header .logo {
@@ -879,22 +946,42 @@ hr {
   }
 
   header nav ul {
-    /* width: 320px; */
-     display: flex; 
-    flex-direction: row-reverse; 
-    justify-self: center;
-    justify-items: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 130px 130px;
+    column-gap: 39px;
 
-    padding-left: 20px;
+    width: 320px;
   }
 
   header nav ul li {
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
   }
 
-  .socials-container img:last-child {
-    display: block;
+  header nav ul .mail,
+  .site {
+    gap: 0;
+    padding-left: 0;
+
+    justify-content: center;
+    align-content: center;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  header nav ul .mail {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  header nav ul .site {
+    grid-column: 1;
+    grid-row: 1;
   }
 
   /* --------------------------------------------------- */
@@ -912,7 +999,7 @@ hr {
     flex-direction: column;
     gap: 6px;
 
-    z-index: 1999;
+    z-index: 2100;
   }
 
   #menu span {
@@ -932,9 +1019,6 @@ hr {
     transform: rotate(-45deg) translateY(-3px) translateX(4px);
   }
 
-  /* .show nav {
-    display: block;
-  } */
   /* --------------------------------------------------- */
   /* ------------burger menu---------------- */
 
@@ -1044,7 +1128,7 @@ hr {
     flex-direction: column;
   }
 
-  #hospitalization .container .text-container ul li{
+  #hospitalization .container .text-container ul li {
     padding-bottom: 8px;
   }
 
@@ -1092,7 +1176,6 @@ hr {
   #pay .container .text-container {
     padding-top: 39px;
   }
-
 
   #benefits .container {
     display: flex;
@@ -1147,10 +1230,6 @@ hr {
     padding-bottom: 38px;
   }
 
-  /* footer {
-
-  } */
-
   footer .container {
     display: grid;
     grid-template-columns: 150px 150px;
@@ -1162,7 +1241,6 @@ hr {
     color: black;
     text-decoration: none;
   }
-
 
   footer .container .icons span .whats_up,
   span .telegram_num {
@@ -1284,7 +1362,888 @@ hr {
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* планшетная версия */
+@media screen and (min-width: 461px) and (max-width: 1240px) {
+  body {
+    padding-top: 0px;
+  }
 
-@media screen and (max-width: 1370px) {
+  span, a {
+    font-size: calc(15px + 1 * (100vw / 1280));
+  }
 
+  h2 {
+    font-size: calc(15px + 34 * (100vw / 1280));
+  }
+
+  .container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+  }
+
+  header {
+    padding-bottom: 40px;
+    position: relative;
+    height: 49px;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    z-index: 1100;
+    background-color: var(--bg_color);
+  }
+
+
+  .mobile-menu {
+    height: 305px;
+    background: #fff;
+    /* z-index: 2100; */
+
+    padding-left: 20px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    text-align: center;
+
+    width: 100vw;
+
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    top: -100%;
+    transition: 0.3s;
+  }
+
+  .mobile-menu.active {
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    align-self: center;
+  }
+
+  .mobile-menu.active ul .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mobile-menu.active ul li .socials-container {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary_color);
+    opacity: 50%;
+    z-index: 1000;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  header nav .numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 15px;
+
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  header nav .numbers span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+
+    padding-bottom: 18px;
+  }
+
+  header nav .numbers .icons span a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #000;
+
+    padding-bottom: 10px;
+  }
+
+  header nav .numbers .icons-mob {
+    display: flex;
+    flex-direction: row;
+
+    width: 132px;
+    height: 30px;
+
+    gap: 12px;
+    justify-content: center;
+  }
+
+  header nav .numbers .icons-mob .phone-mob {
+    background-image: url(../img/phone.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
+  }
+
+  header nav .numbers .icons-mob .telegram-mob {
+    background-image: url(../img/telegram.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
+  }
+
+  header nav .numbers .icons-mob .whatsup-mob {
+    background-image: url(../img/whatsup.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1999;
+  }
+
+  header .logo {
+    width: 150px;
+    height: 49px;
+    background-image: url("../img/logo_mob.svg");
+    background-size: cover;
+
+    z-index: 1999;
+  }
+
+  header nav ul {
+    display: grid;
+    grid-template-columns: 130px 130px;
+    column-gap: 39px;
+
+    /* width: 320px; */
+  }
+
+  header nav ul li {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  header nav ul .mail,
+  .site {
+    gap: 0;
+    padding-left: 0;
+
+    justify-content: center;
+    align-content: center;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  header nav ul .mail {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  header nav ul .site {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* --------------------------------------------------- */
+  /* ------------burger menu---------------- */
+
+  #menu {
+    cursor: pointer;
+
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+
+    z-index: 2100;
+  }
+
+  #menu span {
+    width: 26px;
+    height: 4px;
+    background-color: var(--primary_color);
+    border-radius: 3px;
+    transition: 0.3s ease;
+    transform-origin: center;
+  }
+
+  .open .line1 {
+    transform: rotate(45deg) translateY(3px) translateX(4px);
+  }
+
+  .open .line2 {
+    transform: rotate(-45deg) translateY(-3px) translateX(4px);
+  }
+
+  /* --------------------------------------------------- */
+  /* ------------burger menu---------------- */
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .banner {
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  main .container .banner .text-container {
+    width: 90vw;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  main .container .banner .text-container .logo-h1 {
+    font-size: calc(28px + 21 * (100vw / 1280));
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary_color);
+  }
+
+  main .container .banner .text-container .logo-h1 img {
+    width: 30vw;
+  }
+
+  .banner-img {
+    width: 90vw;
+    height: auto;
+    margin-left: 0;
+  }
+
+  #benefits .container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  #benefits .container {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 80px;
+  }
+
+  #benefits .container .text-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
+
+  #benefits .container .text-container p {
+    width: 70vw;
+  }
+
+  #benefits .container .text-container img {
+    display: none;
+  }
+
+  #benefits .container .mob-img {
+    display: block;
+
+    padding-bottom: 39px;
+  }
+
+  #benefits .container h2 {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+  }
+
+  #benefits .container .text-container .item {
+    padding-left: 35px;
+
+    padding-bottom: 18px;
+  }
+
+  #familiar_with .container .text-container,
+  #elementarno .container .text-container,
+  #hospitalization .container .text-container,
+  #next .container .text-container,
+  #what_for .container .text-container,
+  #pay .container .text-container {
+    padding-top: 0;
+  }
+
+  #hospitalization .container .text-container h2 {
+    width: 40vw;
+  }
+
+  #pay .container .text-container h2 img {
+    width: 20vw;
+    display: initial;
+  }
+
+  #elementarno .container .text-container {
+   padding-top: 10vw;
+  }
+
+  #elementarno .container {
+    gap: 0;
+  }
+
+  #next .container .text-container {
+    height: fit-content;
+  }
+
+  #next .container,
+  #pay .container {
+    grid-template-columns: 50vw 50vw;
+    justify-content: initial;
+  }
+
+  #pay .container {
+    padding-bottom: 0;
+  }
+
+  ul li {
+    width: auto !important;
+  }
+
+  footer .container {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+
+    /* gap: 38px; */
+  }
+
+  footer .container .icons a {
+    color: black;
+    text-decoration: none;
+  }
+
+  footer .container .icons span .whats_up,
+  span .telegram_num {
+    display: none;
+  }
+
+  footer .container .recvizit {
+    grid-area: 2 / 2;
+  }
+
+  footer .container .recvizit ul li {
+    /* max-width: 150px; */
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .recvizit ul li span {
+    font-size: 15px;
+  }
+
+  footer .container .recvizit span {
+    /* max-width: 150px; */
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    padding-bottom: 18px;
+  }
+
+  footer .container .info {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  footer .container .info span {
+    /* font-weight: 600;
+    font-size: 15px; */
+    line-height: 140%;
+    text-align: center;
+  }
+
+  footer .container .numbers span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+
+    padding-bottom: 18px;
+  }
+
+  footer .container .numbers .icons-mob {
+    display: flex;
+    flex-direction: row;
+
+    width: 132px;
+    height: 30px;
+
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-top: 90px;
+  }
+
+  footer .container .numbers .icons-mob .phone-mob {
+    background-image: url(../img/phone.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .telegram-mob {
+    background-image: url(../img/telegram.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .whatsup-mob {
+    background-image: url(../img/whatsup.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .icons span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .icons span .icon.phone,
+  .icon.telegram,
+  .icon.whatsup {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 729px) {
+  main .container .banner .text-container .logo-h1 img {
+    width: 40vw;
+  }
+
+  main .container .banner .text-container {
+    width: 80vw;
+    align-self: initial;
+  }
+
+  #familiar_with .container,
+  #hospitalization .container,
+  #what_for .container,
+  #benefits .container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  #familiar_with img,
+  #elementarno .container img,
+  #hospitalization .container img,
+  #next img,
+  #what_for img,
+  #pay img,
+  #benefits img,
+  #questions img,
+  footer img {
+    display: flex;
+    width: 80vw;
+    height: auto;
+    z-index: -1;
+
+    background-size: cover;
+
+    justify-content: center;
+    align-content: center;
+
+    padding-bottom: 20px;
+  }
+
+  #pay .text-container h2 img,
+  #what_for .container .text-container img,
+  #elementarno .container .text-container img {
+    display: initial;
+    padding-bottom: 0;
+  }
+
+  #pay .container .text-container {
+    padding-bottom: 0;
+  }
+
+  #elementarno .container,
+  #next .container,
+  #pay .container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  #elementarno .container .text-container {
+    width: 80vw;
+    padding-top: 0;
+  }
+
+ #familiar_with .container .text-container,
+  #elementarno .container .text-container,
+  #hospitalization .container .text-container,
+  #next .container .text-container,
+  #what_for .container .text-container,
+  #pay .container .text-container {
+    width: 80vw;
+  }
+
+  #familiar_with .container .text-container ul {
+    width: 80vw;
+  }
+
+  #benefits .container {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 80px;
+  }
+
+  #benefits .container .text-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
+
+  #benefits .container .text-container p {
+    width: 70vw;
+  }
+
+  #benefits .container .text-container img {
+    display: none;
+  }
+
+  #benefits .container .mob-img {
+    display: block;
+
+    padding-bottom: 39px;
+  }
+
+  #benefits .container h2 {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+  }
+
+  #benefits .container .text-container .item {
+    padding-left: 35px;
+
+    padding-bottom: 18px;
+  }
+
+  footer .container {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+
+    gap: 38px;
+  }
+
+  footer .container .icons a {
+    color: black;
+    text-decoration: none;
+  }
+
+  footer .container .icons span .whats_up,
+  span .telegram_num {
+    display: none;
+  }
+
+  footer .container .recvizit {
+    grid-area: 2 / 2;
+  }
+
+  footer .container .recvizit ul li {
+    /* max-width: 150px; */
+    max-width: 30vw;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .recvizit ul li span {
+    font-size: 15px;
+  }
+
+  footer .container .recvizit span {
+    /* max-width: 150px; */
+
+    max-width: 30vw;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    padding-bottom: 18px;
+  }
+
+  footer .container .info {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  footer .container .info span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  footer .container .numbers {
+    /* padding-left: 15vw; */
+  }
+
+  footer .container .numbers span {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+
+    padding-bottom: 18px;
+  }
+
+  footer .container .numbers .icons-mob {
+    display: flex;
+    flex-direction: row;
+
+    width: 132px;
+    height: 30px;
+
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-top: 90px;
+  }
+
+  footer .container .numbers .icons-mob .phone-mob {
+    background-image: url(../img/phone.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .telegram-mob {
+    background-image: url(../img/telegram.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .numbers .icons-mob .whatsup-mob {
+    background-image: url(../img/whatsup.svg);
+
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer .container .icons span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  footer .container .icons span .icon.phone,
+  .icon.telegram,
+  .icon.whatsup {
+    display: none;
+  }
+
+  #hospitalization .button-container,
+  footer .button-container {
+    /* width: 100vw; */
+    gap: 20vw;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 1240px) {
+  p,
+  ul li {
+    width: 45vw;
+  }
+
+  .banner-img {
+    display: flex;
+    width: auto;
+    height: auto;
+    z-index: 1;
+
+    background-size: cover;
+
+    justify-content: center;
+    align-content: center;
+  }
+
+  main .container .banner .text-container {
+    z-index: 999;
+
+    grid-area: 1 / 1;
+
+
+    justify-self: start;
+    margin-top: 5%;
+    max-width: 627px;
+  }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1240px) {
+  .container {
+    width: 93vw;
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+  }
+
+  main .container .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 90vw;
+    position: relative;
+
+    padding-bottom: 100px;
+  }
+
+  main .container .banner .text-container .logo-h1 {
+    width: 60vw;
+  }
+
+  .banner-img {
+    display: flex;
+    width: 42vw;
+    height: auto;
+    z-index: 1;
+
+    background-size: cover;
+
+    justify-content: center;
+    align-content: center;
+
+    margin-left: 50vw;
+  }
+
+  #familiar_with img,
+  #elementarno .container img,
+  #hospitalization .container img,
+  #next img,
+  #what_for img,
+  #pay img,
+  #benefits img,
+  #questions img,
+  footer img {
+    display: flex;
+    width: 42vw;
+    height: auto;
+    z-index: -1;
+
+    background-size: cover;
+
+    justify-content: center;
+    align-content: center;
+  }
+
+  #pay .container .text-container h2 {
+    width: 50vw;
+  }
+
+  #elementarno .container p img {
+    display: initial;
+  }
+
+  #elementarno .container .text-container {
+    width: initial;
+  }
+
+  #hospitalization .container .text-container {
+    width: 40vw;
+  }
+  #hospitalization .container {
+    grid-template-columns: 45vw 40vw;
+  }
+
+  #hospitalization .container .text-container ul {
+    width: 30vw;
+  }
 }
